@@ -1,0 +1,481 @@
+/*
+** reset default config
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*
+** Prepare constant
+*/
+
+:root {
+    /* colors */
+        --color_navbarbackground: #2E323F;
+        --color_backgrounddark: #3B4050;
+        --color_backgroundlight: #F1F1F1;
+        --color_text-light: #FFF;
+        --color_text-grey: #6F737F;
+        --color_text_brown: #A59678;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap');
+/*
+** font-family: 'Montserrat', sans-serif;
+** font-family: 'Oswald', sans-serif;
+*/
+
+
+/*
+** Global config
+*/
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.container{
+    text-align: center;
+
+    width: 80%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    position: relative;
+}
+
+H1{
+    font-size: 3em;
+}
+
+H2{
+    color: var(--color_text-light);
+    font-size: 1.5em;
+}
+
+H3{
+    color: var(--color_text_brown);
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color_text-grey);
+}
+
+a{
+    color: var(--color_text-light);
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/*
+**
+** NAVBAR
+**
+*/
+
+.navbar{
+    padding: 1em;
+
+    background-color: var(--color_navbarbackground);
+
+    color: var(--color_text-light);
+    text-transform: capitalize;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: var(--color_backgrounddark);
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.navbar li{
+    margin: 1em;
+}
+
+.navbar .sign-up{
+    margin: 0 auto;
+
+    text-transform: uppercase;
+    color: var(--color_text-light);
+
+    background-color: var(--color_text_brown);
+    border-radius: 999999999999px;
+
+    padding: 0.5em 1em ;
+}
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+/*
+**
+** HERO
+**
+*/
+
+.hero{
+    width: 100%;
+    background-color: var(--color_backgrounddark);
+
+    padding: 2em;
+}
+
+.hero H1,
+.hero H2,
+.hero p{
+    color: var(--color_text-light);
+}
+
+
+.hero span{
+    color: var(--color_text_brown);
+}
+
+.hero p{
+    font-size: 1.5em;
+    margin-top: 5em;
+
+}
+
+.hero .call-to-action{
+    margin: 2.5em auto;
+
+}
+
+.hero a{
+    font-size: 1.125em;
+    text-transform: uppercase;
+    color: var(--color_text-light);
+
+    background-color: var(--color_text_brown);
+    border-radius: 999999999999px;
+
+    padding: 0.5em 2.625em ;
+}
+
+/*
+**
+** STEPS
+**
+*/
+
+.steps{
+    background-color: var(--color_backgroundlight);
+    
+    padding: 0 1em 2.125em 1em;
+}
+
+
+.step{
+    margin: 0 auto;
+}
+
+.step H3{
+    font-size: 1.5em;
+
+    padding: 2.125rem 0;
+}
+
+.step p{
+    font-size: 1.125em;
+}
+
+/*
+**
+** MAIN
+**
+*/
+
+.main{
+    background-color: var(--color_text-light);
+    
+    padding: 2.5em 0;
+}
+
+.main H3{
+    font-size: 2.25em;
+}
+
+.main p{
+    font-size: 1.125em;
+
+    padding: 1.5em 0;
+}
+
+
+/*
+**
+** HOW TO
+**
+*/
+
+
+.how{
+    background-color: var(--color_backgrounddark);
+
+    margin: 1.5em 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.how H3,
+.how p{
+    color: var(--color_text-light);
+}
+
+.how H3{
+    font-size: 1.875em;
+
+    min-height: 1.9em;
+    padding: 1rem;
+}
+
+.how p{
+    font-size: 1.125em;
+
+    padding: 0 1em 1em 1em;
+}
+
+
+/*
+**
+** FOOTER
+**
+*/
+
+.footer{
+    background-color: var(--color_backgrounddark);
+
+    padding: 5em 1em;
+}
+
+.footer H2{
+    font-size: 2.5em;
+
+    padding-bottom: 2em;
+}
+
+
+.footer li{
+    color: var(--color_text-grey);
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 1rem;
+}
+
+.footer li:first-child{
+    color: var(--color_text_brown);
+    font-size: 1.313em;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1;
+}
+
+.footer p{
+    line-height: 1;
+}
+
+.footer-others{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*
+**
+** MEDIA QUERY
+**
+*/
+
+@media (min-width: 700px) {
+    .navbar .container{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+            visibility: visible;
+            height: auto;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .primary--navbar{
+        margin: 0 auto;
+    }
+
+    .primary--navbar,
+    .secondary--navbar{
+        display: flex;
+        gap: 1em;
+    }
+
+    .hero .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero--title,
+    .hero--content{
+        width: 45%;
+
+        text-align: start;
+    }
+
+    .hero--title{
+        align-self: flex-start;
+    }
+    .hero--content{
+        align-self: flex-end;
+    }
+
+    .hero p{
+        margin-top: 0;
+    }
+
+    .steps .container {
+        display: flex;
+        gap: 5em;
+    }
+    
+    .how-to {
+        display: flex;
+        gap: 2em;
+    }
+
+    .how p{
+        min-height: 285px;
+    }
+
+    .footer-points {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        
+        text-align: start;
+    }
+
+    .footer-others{
+        flex-direction: row;
+    }
+
+    .footer-about{
+        width: 50%;
+    }
+
+    .footer li:first-child{
+        font-size: 1.2em;
+    }
+
+}
+
+
+
+@media (min-width: 1000px) {
+    .main .container {
+        display: flex;
+        gap: 5em;
+    }
+
+    .article{
+        text-align: start;
+    }
+
+    .how-to {
+        flex-direction: column;
+    }
+
+    .how{
+        margin: 0;
+    }
+
+    
+    .how p{
+        min-height: 0;
+    }
+}
+
+
+
+@media (min-width: 1400px) {
+    
+    .hero H1{
+        font-size: 5.625em;
+    }
+}
